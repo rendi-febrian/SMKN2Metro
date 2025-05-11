@@ -1,0 +1,34 @@
+.template-empty {
+  margin: 0 auto;
+  max-width: 380px;
+
+  &__image {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__message {
+    margin-top: 8px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  &.white {
+    .template-empty {
+      &__title {
+        color: var(--ion-color-white);
+      }
+
+      &__message {
+        color: var(--ion-color-light-shade);
+      }
+    }
+  }
+}

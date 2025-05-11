@@ -1,0 +1,32 @@
+<ng-container *ngIf="!isContent; else HeaderAsContentTemplate">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ng-container *ngTemplateOutlet="HeaderContentTemplate"></ng-container>
+    </ion-toolbar>
+  </ion-header>
+</ng-container>
+
+<ng-template #HeaderAsContentTemplate>
+  <div>
+    <ng-container *ngTemplateOutlet="HeaderContentTemplate"></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #HeaderContentTemplate>
+  <div class="header-main">
+    <div class="header-main__title">
+      <ion-img class="header-main__logo" src="/assets/images/logo.png"></ion-img>
+      <div class="header-main__box">
+        <h2 class="header-main__name">
+          SMK Kartikatama
+        </h2>
+        <p class="header-main__address">
+          Perguruan Krida Kartikatama Metro
+        </p>
+      </div>
+    </div>
+    <div class="header-main__notification">
+
+    </div>
+  </div>
+</ng-template>

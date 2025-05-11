@@ -1,0 +1,16 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-padding">
+    <div class="header-back" [class.header-back--white]="theme === 'white'">
+      <div
+        *ngIf="!hideBackButton"
+        class="header-back__icon"
+        (click)="backClick.next()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </div>
+      <p class="header-back__title" [class.show]="isTitleVisible">
+        {{ title }}
+      </p>
+      <div class="header-back__notification"></div>
+    </div>
+  </ion-toolbar>
+</ion-header>

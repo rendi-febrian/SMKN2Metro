@@ -1,0 +1,27 @@
+<div
+  class="field"
+  [class.required]="isRequired"
+  [class.error]="isError">
+  <div class="field__label">
+    {{ label }}
+    <span *ngIf="isRequired">*</span>
+  </div>
+  <div class="field__main">
+    <ion-input
+      class="field__main-field"
+      [type]="type"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+    ></ion-input>
+    <div
+      class="field__main-end"
+      [class.input__right--show]="end.children.length">
+      <div class="field__end" #end>
+        <ng-content select="[end]"></ng-content>
+      </div>
+    </div>
+  </div>
+  <div class="field__helper">
+    <ng-content select="[helper]"></ng-content>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.header-main {
+  display: flex;
+  align-items: center;
+  background: var(--ion-color-primary);
+  padding: 16px;
+  color: var(--ion-color-white);
+
+  &__title {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__logo {
+    height: 36px;
+    width: 36px;
+    margin-right: 12px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__address {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}

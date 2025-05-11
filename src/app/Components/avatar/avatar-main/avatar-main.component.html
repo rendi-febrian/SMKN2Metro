@@ -1,0 +1,8 @@
+<div class="avatar-main avatar-main--size-{{ size }}">
+  <img
+    #ava
+    [src]="url"
+    alt=""
+    class="avatar-main__image"
+    (error)="ava.src = '/assets/images/default/avatar.png'" />
+</div>

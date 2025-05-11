@@ -1,0 +1,105 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32%;
+  }
+
+  &__text {
+    padding: 16px;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__rights {
+    padding: 12px 0;
+  }
+}
+
+.page {
+  &__logo {
+    width: 240px;
+  }
+
+  &__title {
+    color: var(--ion-color-secondary);
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+  
+  &__text {
+    color: var(--ion-color-secondary);
+    text-align: center;
+    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  &__action-login {
+    width: 250px;
+  }
+}
+
+.mdl-loginform {
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.25;
+  }
+  
+  &__text {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 8px;
+
+    span {
+      color: var(--ion-color-primary);
+      font-weight: 500;
+    }
+  }
+
+  &__form {
+    display: block;
+    padding: 24px 0;
+  }
+
+  &__field {
+    display: block;
+    padding: 8px 0;
+
+    &-icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 100%;
+    }
+    
+    &-icon {
+      font-size: 24px;
+    }
+  }
+
+  &__submit {
+    margin: 20px 0;
+  }
+}
+
+app-input-text {
+  position: relative;
+  display: block;
+}
