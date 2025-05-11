@@ -1,0 +1,9 @@
+ion-content {
+  --background: transparent;
+}
+
+ion-content.content {
+  &--bg-primary {
+    --background: var(--ion-color-primary);
+  }
+}

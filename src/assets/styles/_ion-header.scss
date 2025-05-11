@@ -1,0 +1,10 @@
+ion-header {
+  --box-shadow: unset;
+  &::after {
+    background-image: none;
+  }
+
+  ion-toolbar {
+    --min-height: unset;
+  }
+}

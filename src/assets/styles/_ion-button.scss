@@ -1,0 +1,13 @@
+ion-button {
+  &.bg-gray100 {
+    --background: var(--ion-color-gray-100);
+    --background-hover: var(--ion-color-gray-200);
+    --background-activated: var(--ion-color-gray-200);
+    --background-focused: var(--ion-color-gray-200);
+  
+    --color: var(--ion-color-tertiary);
+    --color-activated: var(--ion-color-tertiary);
+    --color-focused: var(--ion-color-tertiary);
+    --color-hover: var(--ion-color-tertiary);
+  }
+}

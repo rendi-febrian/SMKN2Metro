@@ -1,0 +1,40 @@
+ion-modal.modal {
+  &--no-backdrop {
+    &::part(backdrop) {
+      background: transparent;
+    }
+  }
+
+  &--bg-secondary {
+    --background: var(--ion-color-white);
+  }
+}
+
+ion-modal.auto-height {
+  --height: auto;
+
+  &::part(content) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .ion-page {
+    position: relative;
+    display: block;
+    contain: content;
+
+    .inner-content {
+      max-height: 80vh;
+      overflow: auto;
+      padding: 10px;
+    }
+
+    .modal-content {
+      overflow: auto;
+
+      &--safe {
+        padding-bottom: var(--ion-safe-area-bottom, 0);
+      }
+    }
+  }
+}

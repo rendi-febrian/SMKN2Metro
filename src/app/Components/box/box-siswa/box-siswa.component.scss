@@ -1,0 +1,30 @@
+@import 'src/assets/styles/_mixin.scss';
+
+.box-siswa {
+  display: flex;
+  align-items: center;
+
+  app-avatar-main {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  &__box {
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 12px;
+    color: var(--ion-color-white);
+  }
+
+  &__name {
+    @include text-shorten;
+    margin-top: 6px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ion-color-white);
+  }
+}

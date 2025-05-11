@@ -1,0 +1,107 @@
+<ion-content class="content--bg-primary">
+  <div class="content">
+    <section class="content__logo">
+      <img
+        class="page__logo"
+        alt="{{envi.schoolName}} Logo"
+        src="{{envi.schoolLogo}}"
+      />
+    </section>
+    <section class="content__text">
+      <h1 class="page__title">
+        {{envi.loginSchoolNameLabel1}} <br />
+        {{envi.loginSchoolNameLabel2}}
+      </h1>
+      <p class="page__text">
+        {{envi.loginSchoolAddress}}
+      </p>
+    </section>
+    <section class="content__action">
+      <ng-container *ngIf="true">
+        <ng-container *ngIf="!isBusy; else LoadingSpinner">
+          <ion-button
+            class="page__action-login"
+            color="tertiary"
+            expand="block"
+            (click)="showLoginForm()">
+            Masuk
+          </ion-button>
+        </ng-container>
+      </ng-container>
+    </section>
+    <section class="content__rights">
+      <p class="page__text">
+        © 2025 Copyright | CODENUB by RENDI FEBRIAN
+      </p>
+    </section>
+  </div>
+</ion-content>
+
+<ion-modal
+  #modalLoginForm
+  cssClass="mdl-loginform auto-height modal--no-backdrop modal--bg-secondary"
+  initialBreakpoint="1"
+  [breakpoints]="[1]">
+  <ng-template>
+    <div class="modal-content app-container">
+      <h1 class="mdl-loginform__title">
+        Selamat Datang
+      </h1>
+      <p class="mdl-loginform__text">
+        Silahkan isi form untuk mengakses aplikasi <br />
+        <span>{{envi.schoolName}}</span>
+      </p>
+      <form
+        class="mdl-loginform__form"
+        [formGroup]="form">
+        <app-input-text
+          class="mdl-loginform__field"
+          formControlName="email"
+          type="text"
+          label="Email"
+          placeholder="Cth: emailsiswa@sekolah.sch.id"
+          [isRequired]="true"
+          [isError]="!!error.email.msg"
+          (ngModelChange)="onInputChange('email')">
+          <span *ngIf="error.email.msg" helper>
+            {{ error.email.msg }}
+          </span>
+        </app-input-text>
+        <app-input-text
+          class="mdl-loginform__field"
+          label="Password"
+          placeholder="Cth: PasswordSiswa123!"
+          formControlName="password"
+          [type]="passwordType"
+          [isRequired]="true"
+          [isError]="!!error.password.msg"
+          (ngModelChange)="onInputChange('password')">
+          <div class="mdl-loginform__field-icon-box" end>
+            <ion-icon
+              class="mdl-loginform__field-icon"
+              src="/assets/icon/{{ passwordType === 'password' ? 'eye-open' : 'eye-close'}}.svg"
+              (click)="togglePasswordType()"
+            ></ion-icon>
+          </div>
+          <span *ngIf="error.password.msg" helper>
+            {{ error.password.msg }}
+          </span>
+        </app-input-text>
+      </form>
+      <ion-button
+        class="mdl-loginform__submit"
+        expand="block"
+        color="tertiary"
+        [disabled]="isCreatingSession"
+        (click)="submitFormLogin()">
+        <ng-container *ngIf="!isCreatingSession; else LoadingSpinner">
+          Masuk
+        </ng-container>
+      </ion-button>
+    </div>
+  </ng-template>
+</ion-modal>
+
+<ng-template #LoadingSpinner>
+  <ion-spinner name="crescent" color="secondary"></ion-spinner>
+</ng-template>

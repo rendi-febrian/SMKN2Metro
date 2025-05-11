@@ -1,0 +1,17 @@
+.avatar-main {
+  &--size {
+    &-xl {
+      .avatar-main__image {
+        height: 80px;
+        width: 80px;
+      }
+    }
+  }
+
+  &__image {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

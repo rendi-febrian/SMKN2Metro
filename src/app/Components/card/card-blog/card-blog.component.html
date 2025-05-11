@@ -1,0 +1,18 @@
+<div class="card-blog">
+  <div class="card-blog__image">
+    <img
+      #imageRef
+      [src]="image"
+      (error)="imageRef.src = '/assets/images/default/blog.png'"
+    />
+  </div>
+  <div class="card-blog__info">
+
+    <!-- -->
+    <div class="info-item">
+      <h2 class="info-item__title">{{ title }}</h2>
+      <p class="info-item__description">Oleh: {{ creator }}</p>
+    </div>
+
+  </div>
+</div>

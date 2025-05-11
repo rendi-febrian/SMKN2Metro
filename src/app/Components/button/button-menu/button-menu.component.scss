@@ -1,0 +1,23 @@
+@import 'src/assets/styles/_mixin.scss';
+
+.button-menu {
+  height: 62px;
+  max-width: 62px;
+  text-transform: capitalize;
+
+  &::part(native) {
+    box-shadow: unset;
+    border-radius: 8px;
+  }
+
+  &__icon {
+    display: block;
+    font-size: 24px;
+  }
+
+  &__label {
+    margin-top: 6px;
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+}

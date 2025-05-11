@@ -1,0 +1,44 @@
+@import 'src/assets/styles/_mixin.scss';
+
+.card-blog {
+  @include flex-row-center;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--ion-color-gray-100);
+  box-shadow: var(--ion-shadow);
+
+  &__image {
+    width: 30%;
+    align-self: stretch;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    align-self: stretch;
+    flex-grow: 1;
+    padding: 12px;
+    background: var(--ion-color-white)
+  }
+}
+
+.info-item {
+  width: 100%;
+
+  &__title {
+    line-height: 1.25;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ion-color-tertiary);
+  }
+
+  &__description {
+    margin-top: 4px;
+    font-size: 10px;
+    color: var(--ion-color-medium);
+  }
+}
